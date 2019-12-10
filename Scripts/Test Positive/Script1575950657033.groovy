@@ -17,14 +17,11 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('https://mamikos.com/')
 
-WebUI.click(findTestObject('Object Repository/mamikos_1/Page_Mamikos - Cari Kost Apartemen Loker Gampang  Akurat/span_Cari Iklan_caret  --show'))
+WebUI.click(findTestObject('Object Repository/Test Positive/Page_Mamikos - Cari Kost Apartemen Loker Gampang  Akurat/span_Promo dari Kost'))
 
-WebUI.click(findTestObject('Object Repository/mamikos_1/Page_Mamikos - Cari Kost Apartemen Loker Gampang  Akurat/a_Cari kost'))
+Promo = WebUI.getText(findTestObject('Object Repository/Test Positive/Page_Promo Kost Terbaru dari Mamikos/span_Promo dari Kost'))
 
-WebUI.click(findTestObject('Object Repository/mamikos_1/Page_Mamikos - Cari Kost di sekitar sini Cari Kost di sekitarmu/button_Saya Mengerti'))
+WebUI.verifyMatch(Promo, 'Promo dari Kost', false)
 
-WebUI.selectOptionByValue(findTestObject('Object Repository/mamikos_1/Page_Mamikos - Cari Kost di sekitar sini Cari Kost di sekitarmu/select_Semua Khusus Putri Khusus Putra Putri atau Putra Putri dan Campur Putra dan Campur Campur'), 
-    '2', true)
-for(int i=0; i<2; i++) {
-WebUI.click(findTestObject('Object Repository/mamikos_1/Page_Mamikos - Cari Kost di sekitar sini Cari Kost di sekitarmu/a_Lihat lebih banyak lagi'))}
+WebUI.closeBrowser()
 
