@@ -31,6 +31,8 @@ WebUI.delay(5)
 
 WebUI.click(findTestObject('Object Repository/Test Negative/Page_Login Pemilik Iklan - Mamikos/button_LOGIN'))
 
+WebUI.waitForAlert(10)
+
 AlertMsg = WebUI.getAlertText()
 
 WebUI.verifyMatch(AlertMsg, 'Username atau password anda salah', false)
